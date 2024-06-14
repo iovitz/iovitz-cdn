@@ -2,24 +2,18 @@ const path = require('path')
 
 const webpackConfig = {
   entry: {
-    tampermonkey: './src/entry/tampermonkey.ts',
+    monkey_script: './src/entry/monkey_script.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.js'],
   },
   mode: 'production',
   module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
+    rules: [],
   },
   externals: [],
   plugins: [],
